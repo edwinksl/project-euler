@@ -5,8 +5,8 @@ import sys
 
 def main(number):
     prime_numbers = [2]
-    for i in range(2,number):
-        if is_prime(i,prime_numbers):
+    for i in range(2, number):
+        if is_prime(i, prime_numbers):
             prime_numbers.append(i)
     return sum(prime_numbers)
 
