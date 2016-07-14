@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import sys
-
 
 def main():
     result = 1
