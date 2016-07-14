@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
 import sys
+import time
 
 
 def main(number):
@@ -21,5 +22,9 @@ def is_prime(number, prime_numbers):
     return True
 
 if __name__ == '__main__':
+    t_0 = time.time()
     result = main(int(sys.argv[1]))
-    print(result)
+    t_f = time.time()
+    t = t_f - t_0
+    print('Sum = {}'.format(result))
+    print('Time taken = {}s'.format(t))
