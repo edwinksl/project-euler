@@ -2,6 +2,7 @@
 
 import sys
 
+
 def main():
     result = 1
     for i in range(1, 1000):
