@@ -2,6 +2,7 @@
 
 import sys
 
+
 def main(number):
     a_1 = 1
     a_2 = 2
