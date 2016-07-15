@@ -9,8 +9,7 @@ def main(upper_bound):
         if not is_evenly_divisible(result, upper_bound):
             result += 1
         else:
-            break
-    return result
+            return result
 
 
 def is_evenly_divisible(number, upper_bound):
