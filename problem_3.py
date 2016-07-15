@@ -6,7 +6,8 @@ import sys
 def get_prime_factors(number):
     prime_factors = {}
     prime_factor = 2
-    while prime_factor <= number:
+    cutoff = number**(1/2)
+    while prime_factor <= cutoff:
         if number % prime_factor == 0:
             if prime_factor not in prime_factors:
                 prime_factors[prime_factor] = 1
