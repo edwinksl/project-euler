@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import sys
-
+import time
 
 def get_prime_factors(number):
     prime_factors = {}
@@ -24,4 +24,9 @@ def get_largest_prime_factor(number):
     return sorted(prime_factors, reverse=True)[0]
 
 if __name__ == '__main__':
-    print(get_largest_prime_factor(int(sys.argv[1])))
+    t_0 = time.time()
+    result = get_largest_prime_factor(int(sys.argv[1]))
+    t_f = time.time()
+    t = t_f - t_0
+    print('Largest prime factor = {}'.format(result))
+    print('Time elapsed = {}s'.format(t))
