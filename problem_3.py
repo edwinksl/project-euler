@@ -5,9 +5,22 @@ import time
 
 
 def get_prime_factors(number):
-    prime_factors = {}
-    prime_factor = 2
     cutoff = number**(1/2)
+    prime_factors = {}
+
+    # Check if 2 is a prime factor
+    if number % 2 == 0:
+        prime_factors[2] = 1
+        number //= 2
+    while True:
+        if number % 2 == 0:
+            prime_factors[2] += 1
+            number //= 2
+        else:
+            break
+
+    # Check if odd number is a prime factor
+    prime_factor = 3
     while prime_factor <= cutoff:
         if number % prime_factor == 0:
             if prime_factor not in prime_factors:
@@ -16,7 +29,7 @@ def get_prime_factors(number):
                 prime_factors[prime_factor] += 1
             number //= prime_factor
         else:
-            prime_factor += 1
+            prime_factor += 2
     return prime_factors
 
 
