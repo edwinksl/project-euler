@@ -3,6 +3,7 @@
 import sys
 import time
 
+
 def get_prime_factors(number):
     prime_factors = {}
     prime_factor = 2
