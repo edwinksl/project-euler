@@ -29,7 +29,6 @@ def get_prime_factors(number):
             number //= prime_factor
         else:
             prime_factor += 2
-    print(prime_factors)
     return prime_factors
 
 
