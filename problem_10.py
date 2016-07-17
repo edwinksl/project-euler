@@ -19,7 +19,6 @@ def is_prime(number, prime_numbers):
             return False
         if i >= cutoff:
             return True
-    return True
 
 if __name__ == '__main__':
     t_0 = time.time()
