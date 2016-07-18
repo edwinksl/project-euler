@@ -19,16 +19,16 @@ def get_prime_factors(number):
             break
 
     # Check if odd number is a prime factor
-    prime_factor = 3
-    while prime_factor <= number:
-        if number % prime_factor == 0:
-            if prime_factor not in prime_factors:
-                prime_factors[prime_factor] = 1
+    odd_number = 3
+    while odd_number <= number:
+        if number % odd_number == 0:
+            if odd_number not in prime_factors:
+                prime_factors[odd_number] = 1
             else:
-                prime_factors[prime_factor] += 1
-            number //= prime_factor
+                prime_factors[odd_number] += 1
+            number //= odd_number
         else:
-            prime_factor += 2
+            odd_number += 2
     return prime_factors
 
 
