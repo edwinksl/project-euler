@@ -30,4 +30,4 @@ if __name__ == '__main__':
     t_f = time.time()
     t = t_f - t_0
     print('Sum = {}'.format(result))
-    print('Time taken = {}s'.format(t))
+    print('Time taken = {} s'.format(t))

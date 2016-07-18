@@ -42,4 +42,4 @@ if __name__ == '__main__':
     t_f = time.time()
     t = t_f - t_0
     print('Largest prime factor = {}'.format(result))
-    print('Time elapsed = {}s'.format(t))
+    print('Time elapsed = {} s'.format(t))
