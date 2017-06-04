@@ -16,5 +16,6 @@ def main(number):
             result += a
     return result
 
+
 if __name__ == '__main__':
     print(main(int(sys.argv[1])))
