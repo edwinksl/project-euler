@@ -5,14 +5,15 @@ import sys
 
 def main(number, length):
     max_product = 0
-    for i in range(len(number)-length+1):
-        substring = number[i:i+length]
+    for i in range(len(number) - length + 1):
+        substring = number[i:i + length]
         product = 1
         for j in substring:
             product *= int(j)
         if product > max_product:
             max_product = product
     return max_product
+
 
 if __name__ == '__main__':
     number = ('73167176531330624919225119674426574742355349194934'
