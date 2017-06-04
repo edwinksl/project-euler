@@ -4,18 +4,18 @@
 def get_max_path_sum(args):
     tree = get_tree(args)
     n = len(tree)
-    sums = [0]*n
+    sums = [0]*n  # yapf: disable
     sums[0] = tree[0][0][0]  # get root
-    for i in range(1,n):
+    for i in range(1, n):
         sums_copy = sums.copy()
         for j, node in enumerate(tree[i]):
             child = node[0]
             if j == 0:
                 sums[j] = child + sums_copy[j]
             elif j == i:
-                sums[j] = child + sums_copy[j-1]
+                sums[j] = child + sums_copy[j-1]  # yapf: disable
             else:
-                sums[j] = child + max(sums_copy[j], sums_copy[j-1])
+                sums[j] = child + max(sums_copy[j], sums_copy[j-1])  # yapf: disable
     return max(sums)
 
 
@@ -26,18 +26,20 @@ def get_tree(args):
         if i == 0:
             tree[i].append(row)
             continue
-        parents = args[i-1]
-        for j in range(i+1):
+        parents = args[i-1]  # yapf: disable
+        for j in range(i+1):  # yapf: disable
             if j == 0:
                 node = [row[j], parents[j]]
             elif j == i:
-                node = [row[j], parents[j-1]]
+                node = [row[j], parents[j-1]]  # yapf: disable
             else:
-                node = [row[j], parents[j-1], parents[j]]
+                node = [row[j], parents[j-1], parents[j]]  # yapf: disable
             tree[i].append(node)
     return tree
 
+
 if __name__ == '__main__':
+    # yapf: disable
     # args = [[3],
     #         [7, 4],
     #         [2, 4, 6],
@@ -57,4 +59,5 @@ if __name__ == '__main__':
             [91, 71, 52, 38, 17, 14, 91, 43, 58, 50, 27, 29, 48],
             [63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31],
             [4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23]]
+    # yapf: enable
     print(get_max_path_sum(args))
