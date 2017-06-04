@@ -5,7 +5,7 @@ import time
 
 
 def is_prime(number, prime_numbers):
-    cutoff = int(number**(1/2))
+    cutoff = int(number**(1/2))  # yapf: disable
     for i in prime_numbers:
         if number % i == 0:
             return False
@@ -23,6 +23,7 @@ def get_prime_numbers(number):
 
 def main(number):
     return sum(get_prime_numbers(number))
+
 
 if __name__ == '__main__':
     t_0 = time.time()
