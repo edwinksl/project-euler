@@ -7,7 +7,7 @@ from problem_3 import get_prime_factors
 
 def main(upper_bound):
     factors = {}
-    for i in range(2, upper_bound + 1):
+    for i in range(2, upper_bound+1):  # yapf: disable
         prime_factors = get_prime_factors(i)
         for j in prime_factors:
             if j not in factors:
