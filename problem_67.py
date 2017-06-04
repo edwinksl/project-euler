@@ -15,5 +15,6 @@ def get_args():
 def main():
     return get_max_path_sum(get_args())
 
+
 if __name__ == '__main__':
     print(main())
