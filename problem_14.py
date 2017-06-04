@@ -10,13 +10,13 @@ def main(number):
     if n % 2 == 0:
         n //= 2
     else:
-        n = 3*n + 1
+        n = 3*n + 1  # yapf: disable
     sequence.append(n)
     while n != 1:
         if n % 2 == 0:
             n //= 2
         else:
-            n = 3*n + 1
+            n = 3*n + 1  # yapf: disable
         sequence.append(n)
     max_starting_number = n
     max_length = len(sequence)
@@ -29,7 +29,7 @@ def main(number):
             if n % 2 == 0:
                 n //= 2
             else:
-                n = 3*n + 1
+                n = 3*n + 1  # yapf: disable
             sequence.append(n)
         sequence_length = len(sequence)
         if sequence_length > max_length:
@@ -37,6 +37,7 @@ def main(number):
             max_length = sequence_length
 
     return max_starting_number
+
 
 if __name__ == '__main__':
     print(main(int(sys.argv[1])))
