@@ -5,8 +5,8 @@ import sys
 
 def main(number, length):
     max_product = 0
-    for i in range(len(number) - length + 1):
-        substring = number[i:i + length]
+    for i in range(len(number)-length+1):  # yapf: disable
+        substring = number[i:i+length]  # yapf:disable
         product = 1
         for j in substring:
             product *= int(j)
