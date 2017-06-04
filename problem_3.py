@@ -36,6 +36,7 @@ def get_largest_prime_factor(number):
     prime_factors = get_prime_factors(number).keys()
     return sorted(prime_factors, reverse=True)[0]
 
+
 if __name__ == '__main__':
     t_0 = time.time()
     result = get_largest_prime_factor(int(sys.argv[1]))
