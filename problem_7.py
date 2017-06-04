@@ -16,5 +16,6 @@ def main(number):
             i += 1
     return odd_number
 
+
 if __name__ == '__main__':
     print(main(int(sys.argv[1])))
